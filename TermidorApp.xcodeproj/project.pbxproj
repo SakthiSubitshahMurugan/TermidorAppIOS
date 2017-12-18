@@ -7,23 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AE97BD9DB6CD5884541EB8 /* Pods_TermidorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */; };
+		AF062F351FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */; };
+		AF062F361FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */; };
+		AF4A5C5E1FD9C25300204285 /* InjectionStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */; };
+		AF4A5C601FD9C28900204285 /* TermicideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5C5F1FD9C28900204285 /* TermicideType.swift */; };
+		AF74D5C31FDEC75F0076C259 /* InsertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74D5C21FDEC75F0076C259 /* InsertTextField.swift */; };
+		AF74D5C81FE013AF0076C259 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74D5C71FE013AF0076C259 /* DisclaimerViewController.swift */; };
+		AFADB1DE1FE2CD0800FB43B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFADB1DD1FE2CD0800FB43B3 /* HomeViewController.swift */; };
+		AFBD5F861FE81D0D00DB1CA9 /* WorkOrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD5F851FE81D0D00DB1CA9 /* WorkOrderList.swift */; };
+		AFBD5F881FE8283200DB1CA9 /* WorkOrderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD5F871FE8283200DB1CA9 /* WorkOrderObject.swift */; };
 		AFCA47261FD8782400AED17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47251FD8782400AED17C /* AppDelegate.swift */; };
-		AFCA47281FD8782400AED17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47271FD8782400AED17C /* ViewController.swift */; };
+		AFCA47281FD8782400AED17C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47271FD8782400AED17C /* LoginViewController.swift */; };
 		AFCA472B1FD8782400AED17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCA47291FD8782400AED17C /* Main.storyboard */; };
 		AFCA472E1FD8782400AED17C /* TermidorApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFCA472C1FD8782400AED17C /* TermidorApp.xcdatamodeld */; };
 		AFCA47301FD8782400AED17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFCA472F1FD8782400AED17C /* Assets.xcassets */; };
 		AFCA47331FD8782400AED17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCA47311FD8782400AED17C /* LaunchScreen.storyboard */; };
+		AFCA47401FD87ABC00AED17C /* TermicideType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473A1FD87ABC00AED17C /* TermicideType+CoreDataClass.swift */; };
+		AFCA47411FD87ABC00AED17C /* TermicideType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473B1FD87ABC00AED17C /* TermicideType+CoreDataProperties.swift */; };
+		AFCA47421FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473C1FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift */; };
+		AFCA47431FD87ABC00AED17C /* InjectionStation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473D1FD87ABC00AED17C /* InjectionStation+CoreDataProperties.swift */; };
+		AFCA47441FD87ABC00AED17C /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473E1FD87ABC00AED17C /* UserData+CoreDataClass.swift */; };
+		AFCA47451FD87ABC00AED17C /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473F1FD87ABC00AED17C /* UserData+CoreDataProperties.swift */; };
+		AFCA47491FD87B1F00AED17C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47481FD87B1F00AED17C /* User.swift */; };
+		AFF940791FD87C3000E78E4A /* BASF_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF940781FD87C3000E78E4A /* BASF_Service.swift */; };
+		AFF9407B1FD87C6F00E78E4A /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9407A1FD87C6F00E78E4A /* Url.swift */; };
+		AFF9407D1FD87CA100E78E4A /* Base1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9407C1FD87CA100E78E4A /* Base1.swift */; };
+		AFF9407F1FD87CED00E78E4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9407E1FD87CED00E78E4A /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TermidorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FD82FFC3F5B607C40D9E60 /* Pods-TermidorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TermidorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkOrder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkOrder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionStation.swift; sourceTree = "<group>"; };
+		AF4A5C5F1FD9C28900204285 /* TermicideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermicideType.swift; sourceTree = "<group>"; };
+		AF74D5C21FDEC75F0076C259 /* InsertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextField.swift; sourceTree = "<group>"; };
+		AF74D5C71FE013AF0076C259 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
+		AFADB1DD1FE2CD0800FB43B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFBD5F851FE81D0D00DB1CA9 /* WorkOrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderList.swift; sourceTree = "<group>"; };
+		AFBD5F871FE8283200DB1CA9 /* WorkOrderObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderObject.swift; sourceTree = "<group>"; };
 		AFCA47221FD8782400AED17C /* TermidorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TermidorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCA47251FD8782400AED17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFCA47271FD8782400AED17C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFCA47271FD8782400AED17C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AFCA472A1FD8782400AED17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFCA472D1FD8782400AED17C /* TermidorApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TermidorApp.xcdatamodel; sourceTree = "<group>"; };
 		AFCA472F1FD8782400AED17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFCA47321FD8782400AED17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFCA47341FD8782400AED17C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFCA473A1FD87ABC00AED17C /* TermicideType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TermicideType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFCA473B1FD87ABC00AED17C /* TermicideType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TermicideType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFCA473C1FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectionStation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFCA473D1FD87ABC00AED17C /* InjectionStation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectionStation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFCA473E1FD87ABC00AED17C /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFCA473F1FD87ABC00AED17C /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFCA47481FD87B1F00AED17C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFF940781FD87C3000E78E4A /* BASF_Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASF_Service.swift; sourceTree = "<group>"; };
+		AFF9407A1FD87C6F00E78E4A /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		AFF9407C1FD87CA100E78E4A /* Base1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base1.swift; sourceTree = "<group>"; };
+		AFF9407E1FD87CED00E78E4A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DA60B18722B0066456CE6271 /* Pods-TermidorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TermidorApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +75,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AE97BD9DB6CD5884541EB8 /* Pods_TermidorApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		581365EB37BFC02BE9885EF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF74D5C11FDEC72C0076C259 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF74D5C21FDEC75F0076C259 /* InsertTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AFCA47191FD8782400AED17C = {
 			isa = PBXGroup;
 			children = (
 				AFCA47241FD8782400AED17C /* TermidorApp */,
 				AFCA47231FD8782400AED17C /* Products */,
+				CCAB51600C1643D22CABBC60 /* Pods */,
+				581365EB37BFC02BE9885EF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +119,11 @@
 		AFCA47241FD8782400AED17C /* TermidorApp */ = {
 			isa = PBXGroup;
 			children = (
+				AF74D5C11FDEC72C0076C259 /* View */,
+				AFF940841FD880E900E78E4A /* Controllers */,
+				AFF940831FD880C800E78E4A /* Objects */,
+				AFF940801FD8809700E78E4A /* DATA */,
 				AFCA47251FD8782400AED17C /* AppDelegate.swift */,
-				AFCA47271FD8782400AED17C /* ViewController.swift */,
 				AFCA47291FD8782400AED17C /* Main.storyboard */,
 				AFCA472F1FD8782400AED17C /* Assets.xcassets */,
 				AFCA47311FD8782400AED17C /* LaunchScreen.storyboard */,
@@ -67,6 +133,56 @@
 			path = TermidorApp;
 			sourceTree = "<group>";
 		};
+		AFF940801FD8809700E78E4A /* DATA */ = {
+			isa = PBXGroup;
+			children = (
+				AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */,
+				AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */,
+				AFF9407A1FD87C6F00E78E4A /* Url.swift */,
+				AFF940781FD87C3000E78E4A /* BASF_Service.swift */,
+				AFF9407E1FD87CED00E78E4A /* CoreDataStack.swift */,
+				AFCA473A1FD87ABC00AED17C /* TermicideType+CoreDataClass.swift */,
+				AFCA473B1FD87ABC00AED17C /* TermicideType+CoreDataProperties.swift */,
+				AFCA473C1FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift */,
+				AFCA473D1FD87ABC00AED17C /* InjectionStation+CoreDataProperties.swift */,
+				AFCA473E1FD87ABC00AED17C /* UserData+CoreDataClass.swift */,
+				AFCA473F1FD87ABC00AED17C /* UserData+CoreDataProperties.swift */,
+			);
+			path = DATA;
+			sourceTree = "<group>";
+		};
+		AFF940831FD880C800E78E4A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AFF9407C1FD87CA100E78E4A /* Base1.swift */,
+				AFCA47481FD87B1F00AED17C /* User.swift */,
+				AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */,
+				AF4A5C5F1FD9C28900204285 /* TermicideType.swift */,
+				AFBD5F871FE8283200DB1CA9 /* WorkOrderObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		AFF940841FD880E900E78E4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFCA47271FD8782400AED17C /* LoginViewController.swift */,
+				AF74D5C71FE013AF0076C259 /* DisclaimerViewController.swift */,
+				AFADB1DD1FE2CD0800FB43B3 /* HomeViewController.swift */,
+				AFBD5F851FE81D0D00DB1CA9 /* WorkOrderList.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CCAB51600C1643D22CABBC60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93FD82FFC3F5B607C40D9E60 /* Pods-TermidorApp.debug.xcconfig */,
+				DA60B18722B0066456CE6271 /* Pods-TermidorApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFCA47371FD8782400AED17C /* Build configuration list for PBXNativeTarget "TermidorApp" */;
 			buildPhases = (
+				49F5CDAACF31C3F76D657D55 /* [CP] Check Pods Manifest.lock */,
 				AFCA471E1FD8782400AED17C /* Sources */,
 				AFCA471F1FD8782400AED17C /* Frameworks */,
 				AFCA47201FD8782400AED17C /* Resources */,
+				B8BE184F6649CF46A972F631 /* [CP] Embed Pods Frameworks */,
+				3D5B77EBD09DDEE756C35FB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,14 +253,102 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D5B77EBD09DDEE756C35FB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F5CDAACF31C3F76D657D55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TermidorApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8BE184F6649CF46A972F631 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFCA471E1FD8782400AED17C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCA47281FD8782400AED17C /* ViewController.swift in Sources */,
+				AF74D5C81FE013AF0076C259 /* DisclaimerViewController.swift in Sources */,
+				AFBD5F861FE81D0D00DB1CA9 /* WorkOrderList.swift in Sources */,
+				AFCA47431FD87ABC00AED17C /* InjectionStation+CoreDataProperties.swift in Sources */,
+				AFCA47401FD87ABC00AED17C /* TermicideType+CoreDataClass.swift in Sources */,
+				AF062F361FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift in Sources */,
+				AFCA47411FD87ABC00AED17C /* TermicideType+CoreDataProperties.swift in Sources */,
+				AFF940791FD87C3000E78E4A /* BASF_Service.swift in Sources */,
+				AFCA47281FD8782400AED17C /* LoginViewController.swift in Sources */,
+				AFCA47441FD87ABC00AED17C /* UserData+CoreDataClass.swift in Sources */,
+				AF4A5C601FD9C28900204285 /* TermicideType.swift in Sources */,
+				AFF9407D1FD87CA100E78E4A /* Base1.swift in Sources */,
+				AF74D5C31FDEC75F0076C259 /* InsertTextField.swift in Sources */,
+				AF4A5C5E1FD9C25300204285 /* InjectionStation.swift in Sources */,
+				AFF9407F1FD87CED00E78E4A /* CoreDataStack.swift in Sources */,
 				AFCA47261FD8782400AED17C /* AppDelegate.swift in Sources */,
+				AFF9407B1FD87C6F00E78E4A /* Url.swift in Sources */,
+				AFADB1DE1FE2CD0800FB43B3 /* HomeViewController.swift in Sources */,
+				AFCA47451FD87ABC00AED17C /* UserData+CoreDataProperties.swift in Sources */,
+				AFCA47421FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift in Sources */,
+				AFCA47491FD87B1F00AED17C /* User.swift in Sources */,
 				AFCA472E1FD8782400AED17C /* TermidorApp.xcdatamodeld in Sources */,
+				AFBD5F881FE8283200DB1CA9 /* WorkOrderObject.swift in Sources */,
+				AF062F351FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,29 +483,35 @@
 		};
 		AFCA47381FD8782400AED17C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FD82FFC3F5B607C40D9E60 /* Pods-TermidorApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3NEV7QGRF;
 				INFOPLIST_FILE = TermidorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wunderman.TermidorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AFCA47391FD8782400AED17C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA60B18722B0066456CE6271 /* Pods-TermidorApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3NEV7QGRF;
 				INFOPLIST_FILE = TermidorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wunderman.TermidorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

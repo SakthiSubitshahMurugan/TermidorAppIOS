@@ -1,4 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="InjectionStation" representedClassName=".InjectionStation" syncable="YES">
+        <attribute name="controllerIPAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="injectionStationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="injectionStationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iPAddress" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TermicideType" representedClassName=".TermicideType" syncable="YES">
+        <attribute name="dilutionRatio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="injectionCountFactor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="termicideTypeCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="termicideTypeName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserData" representedClassName=".UserData" syncable="YES">
+        <attribute name="canDoTraining" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileAppVersion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rememberMe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteValidationRequired" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userRoleCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userSubRoleCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WorkOrder" representedClassName=".WorkOrder" syncable="YES">
+        <attribute name="addressLine1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressLine2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attentionLine" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="billable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerGroupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerPersonID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerUserRoleCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerUserSubRoleCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="demo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entryTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="generalNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hT_InjectionCount_pln" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hT_InjectorTimer_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hT_LinearDistanceApplication_pln" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hT_TermicideVolume_pln" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hT_WaterVolume_pln" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isNotTooOld" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastSyncTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="linearMeasurementUnit_pln" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minutesWorkedInSession_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readyForArchive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sA_InjectionCount_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sA_InjectorTimer_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sA_LinearDistanceApplication_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sA_PumpVolume_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sA_TermicideVolume_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sA_WaterVolume_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serviceWorkorderID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceWorkorderNumber" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="servMgmtGroupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="servMgmtPersonID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="servMgmtUserRoleCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="servMgmtUserSubRoleCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="servMgmtWorkorderID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soilTypeCode_pln" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soilTypeRefCode_pln" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stateProvinceCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="termicideTypeCode_pln" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="viewportCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volumeMeasurementUnit_pln" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wOAGeneralNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wOGeneralNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wOLocationNotes" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="InjectionStation" positionX="27" positionY="153" width="128" height="105"/>
+        <element name="TermicideType" positionX="0" positionY="144" width="128" height="105"/>
+        <element name="UserData" positionX="-36" positionY="9" width="128" height="240"/>
+        <element name="WorkOrder" positionX="0" positionY="108" width="128" height="825"/>
+    </elements>
 </model>
