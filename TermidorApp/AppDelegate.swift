@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
   //  window?.rootViewController = initialViewController()
     
 
@@ -26,6 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window!.rootViewController = centerVC
             window!.makeKeyAndVisible()
         }
+        
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = uicolorFromHex(rgbValue:0xffffff)
+        navigationBarAppearace.barTintColor = uicolorFromHex(rgbValue:0xC50023)
+        //navigationBarAppearace
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
       return true
     }
 
@@ -51,6 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
        CoreDataStack.sharedInstance.saveContext()
+    }
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
 }
 

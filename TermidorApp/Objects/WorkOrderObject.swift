@@ -23,7 +23,7 @@ var postalCode:String?
 var countryCode:String?
 var generalNotes:String?
 var workorderStatusCode:String?
-var linearDistancePlanned:Double?
+var linearDistancePlanned:Int?
 var linearMeasurementUnit:String?
 var servMgmtGroupID:String?
 var servMgmtPersonID:String?
@@ -34,7 +34,7 @@ var termicideTypeCodePlanned:String?
 var soilTypeCodePlanned:String?
 var volumeMeasurementUnit:String?
 var syncTime:String?
-init(ServiceWorkOrderId:String,ServiceWorkorderNumber:Int,ServiceManagementWorkorderId:String,LocationTitle:String,LocationCode:String,AddressLine1:String,AddressLine2:String,AttentionLine:String,City:String,StateProvinceCode:String,PostalCode:String,CountryCode:String,GeneralNotes:String,WorkorderStatusCode:String,LinearDistancePlanned:Double,LinearMeasurementUnit:String,ServMgmtGroupID:String,ServMgmtUserRoleCode:String,ServMgmtPersonID:String,ServMgmtUserSubRoleCode:String,Demo:String,TermicideTypeCodePlanned:String,SoilTypeCodePlanned:String,VolumeMeasurementUnit:String,SyncTime:String){
+init(ServiceWorkOrderId:String,ServiceWorkorderNumber:Int,ServiceManagementWorkorderId:String,LocationTitle:String,LocationCode:String,AddressLine1:String,AddressLine2:String,AttentionLine:String,City:String,StateProvinceCode:String,PostalCode:String,CountryCode:String,GeneralNotes:String,WorkorderStatusCode:String,LinearDistancePlanned:Int,LinearMeasurementUnit:String,ServMgmtGroupID:String,ServMgmtUserRoleCode:String,ServMgmtPersonID:String,ServMgmtUserSubRoleCode:String,Demo:String,TermicideTypeCodePlanned:String,SoilTypeCodePlanned:String,VolumeMeasurementUnit:String,SyncTime:String){
     
         self.serviceWorkOrderId = ServiceWorkOrderId
         self.serviceWorkorderNumber = ServiceWorkorderNumber

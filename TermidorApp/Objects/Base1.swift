@@ -16,4 +16,7 @@ class Base:NSObject{
     var TermicidetypeObj = [TermicideTypeData]()
     var ServiceAvailabilty:String?
     var result:String?
+    var WorkOrderListObj=[WorkOrderListData]()
+    var WorkOrderID=[String]()
+    var WorkOrderBriefObj=[WorkOrderBriefData]()
 }

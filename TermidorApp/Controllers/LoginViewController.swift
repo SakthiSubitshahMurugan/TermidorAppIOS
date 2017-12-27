@@ -35,6 +35,7 @@ class LoginViewController: UIViewController{
     let context  = CoreDataStack.sharedInstance.persistentContainer.viewContext
     var result:String?
     override func viewDidLoad() {
+        print("bwrbrw")
         super.viewDidLoad()
         userName.delegate = self as? UITextFieldDelegate
         passWord.delegate = self as? UITextFieldDelegate
