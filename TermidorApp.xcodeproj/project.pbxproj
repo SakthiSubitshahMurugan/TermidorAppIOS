@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		16AE97BD9DB6CD5884541EB8 /* Pods_TermidorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */; };
+		AF05E25B1FF56956003F78A4 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05E25A1FF56956003F78A4 /* NewViewController.swift */; };
+		AF05E25F1FF836BF003F78A4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05E25E1FF836BF003F78A4 /* File.swift */; };
 		AF062F351FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */; };
 		AF062F361FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */; };
 		AF480C2D1FF3F0E1002984CE /* WorkOrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF480C2C1FF3F0E1002984CE /* WorkOrderDetail.swift */; };
 		AF480C2F1FF40E43002984CE /* WorkOrderBrief.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF480C2E1FF40E43002984CE /* WorkOrderBrief.swift */; };
+		AF480C311FF560BB002984CE /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF480C301FF560BB002984CE /* WorkOrderTableViewCell.swift */; };
 		AF4A5C5E1FD9C25300204285 /* InjectionStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */; };
 		AF4A5C601FD9C28900204285 /* TermicideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5C5F1FD9C28900204285 /* TermicideType.swift */; };
 		AF699A3E1FE8551300983DB6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF699A3C1FE8551300983DB6 /* SWRevealViewController.m */; };
@@ -48,10 +51,13 @@
 /* Begin PBXFileReference section */
 		77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TermidorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FD82FFC3F5B607C40D9E60 /* Pods-TermidorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TermidorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF05E25A1FF56956003F78A4 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		AF05E25E1FF836BF003F78A4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkOrder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkOrder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF480C2C1FF3F0E1002984CE /* WorkOrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetail.swift; sourceTree = "<group>"; };
 		AF480C2E1FF40E43002984CE /* WorkOrderBrief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderBrief.swift; sourceTree = "<group>"; };
+		AF480C301FF560BB002984CE /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
 		AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionStation.swift; sourceTree = "<group>"; };
 		AF4A5C5F1FD9C28900204285 /* TermicideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermicideType.swift; sourceTree = "<group>"; };
 		AF699A3B1FE8551200983DB6 /* TermidorApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TermidorApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				AFBD5F871FE8283200DB1CA9 /* WorkOrderObject.swift */,
 				AF480C2C1FF3F0E1002984CE /* WorkOrderDetail.swift */,
 				AF480C2E1FF40E43002984CE /* WorkOrderBrief.swift */,
+				AF05E25E1FF836BF003F78A4 /* File.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -209,6 +216,8 @@
 				AF699A471FE9670600983DB6 /* TrainingViewController.swift */,
 				AF8194F41FE99D0D007786B6 /* OptionTableViewController.swift */,
 				AF8194F61FEAA2BA007786B6 /* BaseOptionViewController.swift */,
+				AF480C301FF560BB002984CE /* WorkOrderTableViewCell.swift */,
+				AF05E25A1FF56956003F78A4 /* NewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -385,8 +394,10 @@
 				AF4A5C5E1FD9C25300204285 /* InjectionStation.swift in Sources */,
 				AFF9407F1FD87CED00E78E4A /* CoreDataStack.swift in Sources */,
 				AFCA47261FD8782400AED17C /* AppDelegate.swift in Sources */,
+				AF05E25B1FF56956003F78A4 /* NewViewController.swift in Sources */,
 				AF8194F51FE99D0D007786B6 /* OptionTableViewController.swift in Sources */,
 				AF699A481FE9670600983DB6 /* TrainingViewController.swift in Sources */,
+				AF480C311FF560BB002984CE /* WorkOrderTableViewCell.swift in Sources */,
 				AFF9407B1FD87C6F00E78E4A /* Url.swift in Sources */,
 				AF480C2F1FF40E43002984CE /* WorkOrderBrief.swift in Sources */,
 				AFADB1DE1FE2CD0800FB43B3 /* HomeViewController.swift in Sources */,
@@ -394,6 +405,7 @@
 				AFCA47421FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift in Sources */,
 				AF699A461FE966E500983DB6 /* SettingsViewController.swift in Sources */,
 				AFCA47491FD87B1F00AED17C /* User.swift in Sources */,
+				AF05E25F1FF836BF003F78A4 /* File.swift in Sources */,
 				AFCA472E1FD8782400AED17C /* TermidorApp.xcdatamodeld in Sources */,
 				AFBD5F881FE8283200DB1CA9 /* WorkOrderObject.swift in Sources */,
 				AF062F351FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift in Sources */,

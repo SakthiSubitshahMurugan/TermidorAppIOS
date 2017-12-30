@@ -16,7 +16,15 @@ class Base:NSObject{
     var TermicidetypeObj = [TermicideTypeData]()
     var ServiceAvailabilty:String?
     var result:String?
+    var WorkOrderDetail=[WorkOrderDetailData]()
     var WorkOrderListObj=[WorkOrderListData]()
     var WorkOrderID=[String]()
     var WorkOrderBriefObj=[WorkOrderBriefData]()
+    var newWorkOrder = [String]()
+    var openWorkOder = [String]()
+    var onHoldWorkOrder = [String]()
+    var assingedWorkOrder = [String]()
+    var completeWorkOrder = [String]()
+    var WorkOrderIDandStaus=[workOrderIdandstatusData]()
+
 }
