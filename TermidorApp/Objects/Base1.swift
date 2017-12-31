@@ -13,6 +13,7 @@ class Base:NSObject{
     var Token:String = "NA"
     var Global:User?
     var InjectionStationObj = [InjectionStationData]()
+    var updatedWorkOrderIDs=[String]()
     var TermicidetypeObj = [TermicideTypeData]()
     var ServiceAvailabilty:String?
     var result:String?
@@ -26,5 +27,6 @@ class Base:NSObject{
     var assingedWorkOrder = [String]()
     var completeWorkOrder = [String]()
     var WorkOrderIDandStaus=[workOrderIdandstatusData]()
+    var SyncTime:String = "1970-01-01 00:00:00"
 
 }

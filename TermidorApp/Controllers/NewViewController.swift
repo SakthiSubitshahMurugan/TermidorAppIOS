@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MBProgressHUD
 
 class NewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -26,63 +27,51 @@ class NewViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Loading"
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        LoadWorkOrderList1(Url: "hvh", username: "vn", password: "jv") { (t) in
-            // print("The onHoldWorkOrder \(Base.sharedInstance.onHoldWorkOrder)")
-//            self.ObjectArray = [Objects(sectionName: "New", sectionObjects: ),
-//                                Objects(sectionName: "Completed", sectionObjects: Base.sharedInstance.completeWorkOrder),
-//                                Objects(sectionName: "onHold", sectionObjects: Base.sharedInstance.onHoldWorkOrder)]
-            self.tableView.dataSource = self
-            self.tableView.delegate = self
-            
-            let new = ObjectKind(type: "New", belonging:Base.sharedInstance.newWorkOrder)
-            let onHold = ObjectKind(type: "OnHold", belonging:Base.sharedInstance.onHoldWorkOrder )
-            let completed = ObjectKind(type: "Completed", belonging:Base.sharedInstance.completeWorkOrder )
-            if(Base.sharedInstance.newWorkOrder.isEmpty == false){
-            self.objects.append(new)
+        
+        LoadWorkOrderList1(Url: "hjvhj", username: "b bn", password: "bn nb") { (true) in
+            print("-----------updatedWorkOderID-------------")
+            if(Base.sharedInstance.updatedWorkOrderIDs != Base.sharedInstance.WorkOrderID){
+                print("-------updatedWorkOderIDnoteqaul---------")
+                LoadWorkOrderList2(Url: "hvh", username: "vn", password: "jv") { (t) in
+                    print("-----Finding the new workorder list----------")
+                    let new = ObjectKind(type: "New", belonging:Base.sharedInstance.newWorkOrder)
+                    let onHold = ObjectKind(type: "OnHold", belonging:Base.sharedInstance.onHoldWorkOrder )
+                    let completed = ObjectKind(type: "Completed", belonging:Base.sharedInstance.completeWorkOrder )
+                    
+                    if (!Base.sharedInstance.newWorkOrder.isEmpty) {
+                        self.objects.append(new)
+                    }
+                    if (!Base.sharedInstance.onHoldWorkOrder.isEmpty) {
+                        self.objects.append(onHold)
+                    }
+                    if (!Base.sharedInstance.onHoldWorkOrder.isEmpty) {
+                        self.objects.append(completed)
+                    }
+                    self.do_table_refresh()
+                    MBProgressHUD.hideAllHUDs(for: self.view, animated: true);
+                }
+                
             }
-            if(Base.sharedInstance.onHoldWorkOrder.isEmpty == false){
-            self.objects.append(onHold)
+            else{
+                LoadWorkOrderDetail1(Url: "hjvhj", username: "n nb", password: " nb "){(true)
+                    in
+                    print("----Updated Work Order Detail--------")
+
             }
-            if(Base.sharedInstance.onHoldWorkOrder.isEmpty == false){
-            self.objects.append(completed)
-            }
-            self.do_table_refresh()
         }
         
-           
+    
            
         }
- 
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//
-//         return ObjectArray.count
-//    }
-//
-//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-//       // print("numberOfRowsInSection\(ObjectArray[section])")
-//         return ObjectArray[section].sectionObjects.count
-//
-//    }
-//
-//
-//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-//        var cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WorkOrderTableViewCell
-//        print("The section is \(ObjectArray[indexPath.section])----\(ObjectArray[indexPath.section].sectionObjects[indexPath.row])")
-//      //  print(ObjectArray[0])
-//        print(indexPath.section)
-//        cell.WorkOrderNum.text=ObjectArray[indexPath.section].sectionObjects[indexPath.row]
-//        return cell
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//         return ObjectArray[section].sectionName
-//    }
-//
+    }
+
     func do_table_refresh()
     {
             self.tableView.reloadData()
@@ -98,12 +87,8 @@ class NewViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:WorkOrderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WorkOrderTableViewCell
         let WorkNum = objects[indexPath.section].belonging[indexPath.row]
-
         cell.WorkOrderNum.text = WorkNum
-        print(WorkNum)
-        print("Base Oject is \(Base.sharedInstance.WorkOrderIDandStaus)")
         let Address = Base.sharedInstance.WorkOrderIDandStaus.index{$0.workOrderNumber == WorkNum}
-        print(Base.sharedInstance.WorkOrderIDandStaus[Address!].Address)
         cell.Address.text = Base.sharedInstance.WorkOrderIDandStaus[Address!].Address as! String
         return cell
     }
@@ -120,10 +105,7 @@ class NewViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
            return 100.0
     }
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-//    {
-//
-//    }
+
 }
 
 
