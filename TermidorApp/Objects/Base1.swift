@@ -28,5 +28,9 @@ class Base:NSObject{
     var completeWorkOrder = [String]()
     var WorkOrderIDandStaus=[workOrderIdandstatusData]()
     var SyncTime:String = "1970-01-01 00:00:00"
+    var selectedWorkOrder:String?
+    var selectedWorkOrderDetail:WorkOrderDetailData?
+    var selectedWorkOrderList:WorkOrderListData?
+    var selectedtermicideType:TermicideTypeData?
 
 }

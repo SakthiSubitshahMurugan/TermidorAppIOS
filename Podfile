@@ -11,7 +11,8 @@ target 'TermidorApp' do
 	pod 'BEMCheckBox'
 	pod 'SVProgressHUD'
 	pod 'MBProgressHUD', '~> 1.1.0'
-	pod 'RNCryptor', '~> 5.0'
+	pod 'RNCryptor', '~> 5.0’
+	pod 'SwiftyBluetooth'
 
   # Pods for TermidorApp
 

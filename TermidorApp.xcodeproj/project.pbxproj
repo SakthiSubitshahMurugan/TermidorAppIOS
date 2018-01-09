@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16AE97BD9DB6CD5884541EB8 /* Pods_TermidorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */; };
-		AF05E25B1FF56956003F78A4 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05E25A1FF56956003F78A4 /* NewViewController.swift */; };
+		AF05E25B1FF56956003F78A4 /* WorkOrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05E25A1FF56956003F78A4 /* WorkOrderList.swift */; };
 		AF05E25F1FF836BF003F78A4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05E25E1FF836BF003F78A4 /* File.swift */; };
 		AF062F351FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */; };
 		AF062F361FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */; };
@@ -17,6 +17,7 @@
 		AF480C311FF560BB002984CE /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF480C301FF560BB002984CE /* WorkOrderTableViewCell.swift */; };
 		AF4A5C5E1FD9C25300204285 /* InjectionStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */; };
 		AF4A5C601FD9C28900204285 /* TermicideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5C5F1FD9C28900204285 /* TermicideType.swift */; };
+		AF5E361B1FFFECCB0041A296 /* WorkOrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E361A1FFFECCB0041A296 /* WorkOrderDetailTableViewCell.swift */; };
 		AF699A3E1FE8551300983DB6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF699A3C1FE8551300983DB6 /* SWRevealViewController.m */; };
 		AF699A421FE94D2E00983DB6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF699A411FE94D2E00983DB6 /* GradientView.swift */; };
 		AF699A441FE9669B00983DB6 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF699A431FE9669B00983DB6 /* SupportViewController.swift */; };
@@ -27,7 +28,8 @@
 		AF8194F51FE99D0D007786B6 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8194F41FE99D0D007786B6 /* OptionTableViewController.swift */; };
 		AF8194F71FEAA2BA007786B6 /* BaseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8194F61FEAA2BA007786B6 /* BaseOptionViewController.swift */; };
 		AFADB1DE1FE2CD0800FB43B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFADB1DD1FE2CD0800FB43B3 /* HomeViewController.swift */; };
-		AFBD5F861FE81D0D00DB1CA9 /* WorkOrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD5F851FE81D0D00DB1CA9 /* WorkOrderList.swift */; };
+		AFB9C3F91FFC1D52000A8DA5 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C3F81FFC1D52000A8DA5 /* Button.swift */; };
+		AFB9C3FB1FFC20AB000A8DA5 /* WorkOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C3FA1FFC20AB000A8DA5 /* WorkOrderDetailViewController.swift */; };
 		AFBD5F881FE8283200DB1CA9 /* WorkOrderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD5F871FE8283200DB1CA9 /* WorkOrderObject.swift */; };
 		AFCA47261FD8782400AED17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47251FD8782400AED17C /* AppDelegate.swift */; };
 		AFCA47281FD8782400AED17C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47271FD8782400AED17C /* LoginViewController.swift */; };
@@ -42,6 +44,15 @@
 		AFCA47441FD87ABC00AED17C /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473E1FD87ABC00AED17C /* UserData+CoreDataClass.swift */; };
 		AFCA47451FD87ABC00AED17C /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA473F1FD87ABC00AED17C /* UserData+CoreDataProperties.swift */; };
 		AFCA47491FD87B1F00AED17C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA47481FD87B1F00AED17C /* User.swift */; };
+		AFDD01FD20037627004A3556 /* AnotherWorderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD01FC20037627004A3556 /* AnotherWorderDetailTableViewCell.swift */; };
+		AFDD01FF200376A9004A3556 /* WorkOrderDetailHoldAndCompTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD01FE200376A9004A3556 /* WorkOrderDetailHoldAndCompTableViewController.swift */; };
+		AFDD02012003D3D0004A3556 /* WorkDetailScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD02002003D3D0004A3556 /* WorkDetailScreenTableViewController.swift */; };
+		AFDD02032003D3EA004A3556 /* WorkDetailHoldAndCompleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD02022003D3EA004A3556 /* WorkDetailHoldAndCompleteTableViewController.swift */; };
+		AFDD02052003D463004A3556 /* WorkDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD02042003D463004A3556 /* WorkDetailTableViewCell.swift */; };
+		AFDD02072003D48C004A3556 /* WorkDetailHoldAndCompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD02062003D48C004A3556 /* WorkDetailHoldAndCompleteTableViewCell.swift */; };
+		AFDD020920051DE7004A3556 /* ScannableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD020820051DE7004A3556 /* ScannableCellTableViewCell.swift */; };
+		AFE205EE1FFFDBAB00959D68 /* WorkOrderDetail1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE205ED1FFFDBAB00959D68 /* WorkOrderDetail1ViewController.swift */; };
+		AFE205F01FFFE60100959D68 /* WorkOrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE205EF1FFFE60000959D68 /* WorkOrderDetailTableViewController.swift */; };
 		AFF940791FD87C3000E78E4A /* BASF_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF940781FD87C3000E78E4A /* BASF_Service.swift */; };
 		AFF9407B1FD87C6F00E78E4A /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9407A1FD87C6F00E78E4A /* Url.swift */; };
 		AFF9407D1FD87CA100E78E4A /* Base1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9407C1FD87CA100E78E4A /* Base1.swift */; };
@@ -51,7 +62,7 @@
 /* Begin PBXFileReference section */
 		77D06192E5AC59D6CCC06FE7 /* Pods_TermidorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TermidorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FD82FFC3F5B607C40D9E60 /* Pods-TermidorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TermidorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TermidorApp/Pods-TermidorApp.debug.xcconfig"; sourceTree = "<group>"; };
-		AF05E25A1FF56956003F78A4 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		AF05E25A1FF56956003F78A4 /* WorkOrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderList.swift; sourceTree = "<group>"; };
 		AF05E25E1FF836BF003F78A4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AF062F331FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkOrder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF062F341FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkOrder+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -60,6 +71,7 @@
 		AF480C301FF560BB002984CE /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
 		AF4A5C5D1FD9C25300204285 /* InjectionStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionStation.swift; sourceTree = "<group>"; };
 		AF4A5C5F1FD9C28900204285 /* TermicideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermicideType.swift; sourceTree = "<group>"; };
+		AF5E361A1FFFECCB0041A296 /* WorkOrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		AF699A3B1FE8551200983DB6 /* TermidorApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TermidorApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF699A3C1FE8551300983DB6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		AF699A3D1FE8551300983DB6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -72,7 +84,8 @@
 		AF8194F41FE99D0D007786B6 /* OptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
 		AF8194F61FEAA2BA007786B6 /* BaseOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOptionViewController.swift; sourceTree = "<group>"; };
 		AFADB1DD1FE2CD0800FB43B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AFBD5F851FE81D0D00DB1CA9 /* WorkOrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderList.swift; sourceTree = "<group>"; };
+		AFB9C3F81FFC1D52000A8DA5 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		AFB9C3FA1FFC20AB000A8DA5 /* WorkOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetailViewController.swift; sourceTree = "<group>"; };
 		AFBD5F871FE8283200DB1CA9 /* WorkOrderObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderObject.swift; sourceTree = "<group>"; };
 		AFCA47221FD8782400AED17C /* TermidorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TermidorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCA47251FD8782400AED17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +102,15 @@
 		AFCA473E1FD87ABC00AED17C /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFCA473F1FD87ABC00AED17C /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AFCA47481FD87B1F00AED17C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFDD01FC20037627004A3556 /* AnotherWorderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherWorderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AFDD01FE200376A9004A3556 /* WorkOrderDetailHoldAndCompTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetailHoldAndCompTableViewController.swift; sourceTree = "<group>"; };
+		AFDD02002003D3D0004A3556 /* WorkDetailScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailScreenTableViewController.swift; sourceTree = "<group>"; };
+		AFDD02022003D3EA004A3556 /* WorkDetailHoldAndCompleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailHoldAndCompleteTableViewController.swift; sourceTree = "<group>"; };
+		AFDD02042003D463004A3556 /* WorkDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AFDD02062003D48C004A3556 /* WorkDetailHoldAndCompleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailHoldAndCompleteTableViewCell.swift; sourceTree = "<group>"; };
+		AFDD020820051DE7004A3556 /* ScannableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannableCellTableViewCell.swift; sourceTree = "<group>"; };
+		AFE205ED1FFFDBAB00959D68 /* WorkOrderDetail1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetail1ViewController.swift; sourceTree = "<group>"; };
+		AFE205EF1FFFE60000959D68 /* WorkOrderDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetailTableViewController.swift; sourceTree = "<group>"; };
 		AFF940781FD87C3000E78E4A /* BASF_Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASF_Service.swift; sourceTree = "<group>"; };
 		AFF9407A1FD87C6F00E78E4A /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		AFF9407C1FD87CA100E78E4A /* Base1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base1.swift; sourceTree = "<group>"; };
@@ -131,6 +153,7 @@
 			children = (
 				AF74D5C21FDEC75F0076C259 /* InsertTextField.swift */,
 				AF699A411FE94D2E00983DB6 /* GradientView.swift */,
+				AFB9C3F81FFC1D52000A8DA5 /* Button.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,14 +233,24 @@
 				AFCA47271FD8782400AED17C /* LoginViewController.swift */,
 				AF74D5C71FE013AF0076C259 /* DisclaimerViewController.swift */,
 				AFADB1DD1FE2CD0800FB43B3 /* HomeViewController.swift */,
-				AFBD5F851FE81D0D00DB1CA9 /* WorkOrderList.swift */,
 				AF699A431FE9669B00983DB6 /* SupportViewController.swift */,
 				AF699A451FE966E500983DB6 /* SettingsViewController.swift */,
 				AF699A471FE9670600983DB6 /* TrainingViewController.swift */,
 				AF8194F41FE99D0D007786B6 /* OptionTableViewController.swift */,
 				AF8194F61FEAA2BA007786B6 /* BaseOptionViewController.swift */,
 				AF480C301FF560BB002984CE /* WorkOrderTableViewCell.swift */,
-				AF05E25A1FF56956003F78A4 /* NewViewController.swift */,
+				AF05E25A1FF56956003F78A4 /* WorkOrderList.swift */,
+				AFB9C3FA1FFC20AB000A8DA5 /* WorkOrderDetailViewController.swift */,
+				AFE205ED1FFFDBAB00959D68 /* WorkOrderDetail1ViewController.swift */,
+				AFE205EF1FFFE60000959D68 /* WorkOrderDetailTableViewController.swift */,
+				AF5E361A1FFFECCB0041A296 /* WorkOrderDetailTableViewCell.swift */,
+				AFDD01FC20037627004A3556 /* AnotherWorderDetailTableViewCell.swift */,
+				AFDD01FE200376A9004A3556 /* WorkOrderDetailHoldAndCompTableViewController.swift */,
+				AFDD02002003D3D0004A3556 /* WorkDetailScreenTableViewController.swift */,
+				AFDD02022003D3EA004A3556 /* WorkDetailHoldAndCompleteTableViewController.swift */,
+				AFDD02042003D463004A3556 /* WorkDetailTableViewCell.swift */,
+				AFDD02062003D48C004A3556 /* WorkDetailHoldAndCompleteTableViewCell.swift */,
+				AFDD020820051DE7004A3556 /* ScannableCellTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -349,6 +382,7 @@
 				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBluetooth/SwiftyBluetooth.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
@@ -360,6 +394,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBluetooth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
@@ -376,12 +411,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF74D5C81FE013AF0076C259 /* DisclaimerViewController.swift in Sources */,
-				AFBD5F861FE81D0D00DB1CA9 /* WorkOrderList.swift in Sources */,
 				AFCA47431FD87ABC00AED17C /* InjectionStation+CoreDataProperties.swift in Sources */,
+				AFDD02032003D3EA004A3556 /* WorkDetailHoldAndCompleteTableViewController.swift in Sources */,
 				AFCA47401FD87ABC00AED17C /* TermicideType+CoreDataClass.swift in Sources */,
 				AF8194F71FEAA2BA007786B6 /* BaseOptionViewController.swift in Sources */,
 				AF062F361FE8353C00CAFA63 /* WorkOrder+CoreDataProperties.swift in Sources */,
 				AFCA47411FD87ABC00AED17C /* TermicideType+CoreDataProperties.swift in Sources */,
+				AFB9C3F91FFC1D52000A8DA5 /* Button.swift in Sources */,
 				AFF940791FD87C3000E78E4A /* BASF_Service.swift in Sources */,
 				AFCA47281FD8782400AED17C /* LoginViewController.swift in Sources */,
 				AFCA47441FD87ABC00AED17C /* UserData+CoreDataClass.swift in Sources */,
@@ -389,24 +425,34 @@
 				AF699A421FE94D2E00983DB6 /* GradientView.swift in Sources */,
 				AFF9407D1FD87CA100E78E4A /* Base1.swift in Sources */,
 				AF699A3E1FE8551300983DB6 /* SWRevealViewController.m in Sources */,
+				AF5E361B1FFFECCB0041A296 /* WorkOrderDetailTableViewCell.swift in Sources */,
 				AF699A441FE9669B00983DB6 /* SupportViewController.swift in Sources */,
 				AF74D5C31FDEC75F0076C259 /* InsertTextField.swift in Sources */,
 				AF4A5C5E1FD9C25300204285 /* InjectionStation.swift in Sources */,
 				AFF9407F1FD87CED00E78E4A /* CoreDataStack.swift in Sources */,
+				AFDD01FD20037627004A3556 /* AnotherWorderDetailTableViewCell.swift in Sources */,
 				AFCA47261FD8782400AED17C /* AppDelegate.swift in Sources */,
-				AF05E25B1FF56956003F78A4 /* NewViewController.swift in Sources */,
+				AF05E25B1FF56956003F78A4 /* WorkOrderList.swift in Sources */,
 				AF8194F51FE99D0D007786B6 /* OptionTableViewController.swift in Sources */,
+				AFDD020920051DE7004A3556 /* ScannableCellTableViewCell.swift in Sources */,
+				AFDD02012003D3D0004A3556 /* WorkDetailScreenTableViewController.swift in Sources */,
+				AFB9C3FB1FFC20AB000A8DA5 /* WorkOrderDetailViewController.swift in Sources */,
 				AF699A481FE9670600983DB6 /* TrainingViewController.swift in Sources */,
 				AF480C311FF560BB002984CE /* WorkOrderTableViewCell.swift in Sources */,
 				AFF9407B1FD87C6F00E78E4A /* Url.swift in Sources */,
+				AFDD02052003D463004A3556 /* WorkDetailTableViewCell.swift in Sources */,
+				AFDD02072003D48C004A3556 /* WorkDetailHoldAndCompleteTableViewCell.swift in Sources */,
 				AF480C2F1FF40E43002984CE /* WorkOrderBrief.swift in Sources */,
 				AFADB1DE1FE2CD0800FB43B3 /* HomeViewController.swift in Sources */,
 				AFCA47451FD87ABC00AED17C /* UserData+CoreDataProperties.swift in Sources */,
+				AFDD01FF200376A9004A3556 /* WorkOrderDetailHoldAndCompTableViewController.swift in Sources */,
 				AFCA47421FD87ABC00AED17C /* InjectionStation+CoreDataClass.swift in Sources */,
 				AF699A461FE966E500983DB6 /* SettingsViewController.swift in Sources */,
 				AFCA47491FD87B1F00AED17C /* User.swift in Sources */,
 				AF05E25F1FF836BF003F78A4 /* File.swift in Sources */,
+				AFE205EE1FFFDBAB00959D68 /* WorkOrderDetail1ViewController.swift in Sources */,
 				AFCA472E1FD8782400AED17C /* TermidorApp.xcdatamodeld in Sources */,
+				AFE205F01FFFE60100959D68 /* WorkOrderDetailTableViewController.swift in Sources */,
 				AFBD5F881FE8283200DB1CA9 /* WorkOrderObject.swift in Sources */,
 				AF062F351FE8353C00CAFA63 /* WorkOrder+CoreDataClass.swift in Sources */,
 				AF480C2D1FF3F0E1002984CE /* WorkOrderDetail.swift in Sources */,

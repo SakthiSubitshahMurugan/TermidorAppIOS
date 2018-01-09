@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2EE0B20D76082DC05303B5B14B49153"
+               BlueprintIdentifier = "9088B01BEB6E1B5628B75DBBD867F9BB"
                BuildableName = "Pods_TermidorApp.framework"
                BlueprintName = "Pods-TermidorApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2EE0B20D76082DC05303B5B14B49153"
+            BlueprintIdentifier = "9088B01BEB6E1B5628B75DBBD867F9BB"
             BuildableName = "Pods_TermidorApp.framework"
             BlueprintName = "Pods-TermidorApp"
             ReferencedContainer = "container:Pods.xcodeproj">

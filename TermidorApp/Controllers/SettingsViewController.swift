@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class SettingsViewController: BaseOptionViewController {
+class SettingsViewController: BaseOptionViewController{
+    var peripherals:[CBPeripheral] = []
+    var manager: CBCentralManager? = nil
+    //var parentView:MainViewController? = nil
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     self.navigationItem.title = "Settings"
         
     }
-
+  
    
 }

@@ -170,6 +170,7 @@ completion(true)
 }
 
 func LoadWorkOrderList1(Url:String,username:String,password:String,completions: @escaping ( _ success:Bool)->Void){
+    Base.sharedInstance.updatedWorkOrderIDs.removeAll()
     var resCount = 1
     var tempCount = 0
     var DetailCount=0
@@ -203,8 +204,9 @@ func LoadWorkOrderList1(Url:String,username:String,password:String,completions: 
                 let ServiceWorkorderID = (subJson["ServiceWorkorderID"].string as String!)!
           //      print(ServiceWorkorderID)
                // Base.sharedInstance.WorkOrderID.append(ServiceWorkorderID)
+                
                 Base.sharedInstance.updatedWorkOrderIDs.append(ServiceWorkorderID)
-                print(Base.sharedInstance.updatedWorkOrderIDs)
+               // print(Base.sharedInstance.updatedWorkOrderIDs)
 //                let AddressLine1 = (subJson["AddressLine1"].string as String!)!
 //                let AddressLine2 = (subJson["AddressLine2"].string as String!)!
 //                let AttentionLine = (subJson["AttentionLine"].string as String!)!
@@ -317,7 +319,7 @@ for i in Base.sharedInstance.WorkOrderID{
             Base.sharedInstance.WorkOrderDetail.append(WorkOrderDetailData.init(EntrySeq: EntrySeq, EntryTime: EntryTime, EntityActive: EntityActive, ViewportCode: ViewportCode, ServiceWorkorderID: ServiceWorkorderID, ServiceWorkorderNumber: ServiceWorkorderNumber, LatestEntry: LatestEntry, ServMgmtGroupID: ServMgmtGroupID, ServMgmtPersonID: ServMgmtPersonID, ServMgmtUserRoleCode: ServMgmtUserRoleCode, ServMgmtUserSubRoleCode: ServMgmtUserSubRoleCode, WorkorderStatusCode: WorkorderStatusCode, InjectionStationID_act: InjectionStationID_act, TermicideTypeCode_act: TermicideTypeCode_act, SoilTypeCode_act: SoilTypeCode_act, SoilTypeRefCode_act: SoilTypeRefCode_act, HT_InjectionCount_act: HT_InjectionCount_act, HT_LinearDistanceApplication_act: HT_LinearDistanceApplication_act, HT_TermicideVolume_act: HT_TermicideVolume_act, HT_WaterVolume_act: HT_WaterVolume_act, HT_PumpVolume_act: Double(HT_PumpVolume_act), HT_InjectorTimer_act: HT_InjectorTimer_act, SA_InjectionCount_act: SA_InjectionCount_act, SA_LinearDistanceApplication_act: SA_LinearDistanceApplication_act, SA_TermicideVolume_act: SA_TermicideVolume_act, SA_WaterVolume_act: SA_WaterVolume_act, SA_PumpVolume_act: Double(SA_PumpVolume_act), SA_InjectorTimer_act: SA_InjectorTimer_act, FlowRate: FlowRate, DosingVolume: DosingVolume, LinearMeasurementUnit_act: LinearMeasurementUnit_act, VolumeMeasurementUnit_act: VolumeMeasurementUnit_act, Latitude: Latitude, Longitude: Longitude, WorkStartTime: WorkStartTime, WorkFinishTime: WorkFinishTime, MinutesWorkedInSession_act: MinutesWorkedInSession_act, AlertMessage: AlertMessage, PumpAlertFlag: PumpAlertFlag, WaterAlertFlag: WaterAlertFlag, UsingHTFlowInSAModeAlertFlag: UsingHTFlowInSAModeAlertFlag, HTModeEnabled: HTModeEnabled, SAModeEnabled: SAModeEnabled, WorkorderSlotLocationUsed: WorkorderSlotLocationUsed, GeneralNotes: GeneralNotes, LocationNotes: LocationNotes, LastSyncTime: LastSyncTime))
             
             let WorkOrderB = WorkOrderBriefData.init(WorkOrderNumber: i, Status: WorkorderStatusCode)
-            print(Base.sharedInstance.WorkOrderDetail.count)
+           // print(Base.sharedInstance.WorkOrderDetail.count)
 
             if(WorkOrderB.status == "H"){
                 Base.sharedInstance.onHoldWorkOrder.append(i)
@@ -331,7 +333,7 @@ for i in Base.sharedInstance.WorkOrderID{
             if(WorkOrderB.status == "N"){
                 Base.sharedInstance.newWorkOrder.append(i)
             }
-           // print("on Hold")
+           print("on Hold")
             (Base.sharedInstance.onHoldWorkOrder.count)
         }
         completion(true)
@@ -428,7 +430,6 @@ func LoadWorkOrderList2(Url:String,username:String,password:String,completions: 
                 
                 Base.sharedInstance.WorkOrderID.append(ServiceWorkorderID)
                 Base.sharedInstance.WorkOrderIDandStaus.append(workOrderIdandstatusData.init(WorkOrderNumber: ServiceWorkorderID, Address: "\(AddressLine1)\(City)\(StateProvinceCode)"))
-                
                 LoadWorkOrderDetail2(Url: "vh", username: "bv v", password: "cvb", completion: { (true) in
                     DetailCount=DetailCount+1
                     if(resCount == DetailCount ){
@@ -455,6 +456,9 @@ func LoadWorkOrderList2(Url:String,username:String,password:String,completions: 
 }
 
 func LoadWorkOrderDetail2(Url:String,username:String,password:String,completion:@escaping ( _ success:Bool)->Void){
+    Base.sharedInstance.newWorkOrder.removeAll()
+    Base.sharedInstance.completeWorkOrder.removeAll()
+    Base.sharedInstance.onHoldWorkOrder.removeAll()
     
     
     var inj2 = "http://stage.evergreen.datacore.us/WorkOrderDetail?WO_Number="
@@ -520,7 +524,7 @@ func LoadWorkOrderDetail2(Url:String,username:String,password:String,completion:
             let LocationNotes=(json["LocationNotes"].stringValue)
             let LastSyncTime=(json["LastSyncTime"].stringValue)
             Base.sharedInstance.WorkOrderDetail.append(WorkOrderDetailData.init(EntrySeq: EntrySeq, EntryTime: EntryTime, EntityActive: EntityActive, ViewportCode: ViewportCode, ServiceWorkorderID: ServiceWorkorderID, ServiceWorkorderNumber: ServiceWorkorderNumber, LatestEntry: LatestEntry, ServMgmtGroupID: ServMgmtGroupID, ServMgmtPersonID: ServMgmtPersonID, ServMgmtUserRoleCode: ServMgmtUserRoleCode, ServMgmtUserSubRoleCode: ServMgmtUserSubRoleCode, WorkorderStatusCode: WorkorderStatusCode, InjectionStationID_act: InjectionStationID_act, TermicideTypeCode_act: TermicideTypeCode_act, SoilTypeCode_act: SoilTypeCode_act, SoilTypeRefCode_act: SoilTypeRefCode_act, HT_InjectionCount_act: HT_InjectionCount_act, HT_LinearDistanceApplication_act: HT_LinearDistanceApplication_act, HT_TermicideVolume_act: HT_TermicideVolume_act, HT_WaterVolume_act: HT_WaterVolume_act, HT_PumpVolume_act: Double(HT_PumpVolume_act), HT_InjectorTimer_act: HT_InjectorTimer_act, SA_InjectionCount_act: SA_InjectionCount_act, SA_LinearDistanceApplication_act: SA_LinearDistanceApplication_act, SA_TermicideVolume_act: SA_TermicideVolume_act, SA_WaterVolume_act: SA_WaterVolume_act, SA_PumpVolume_act: Double(SA_PumpVolume_act), SA_InjectorTimer_act: SA_InjectorTimer_act, FlowRate: FlowRate, DosingVolume: DosingVolume, LinearMeasurementUnit_act: LinearMeasurementUnit_act, VolumeMeasurementUnit_act: VolumeMeasurementUnit_act, Latitude: Latitude, Longitude: Longitude, WorkStartTime: WorkStartTime, WorkFinishTime: WorkFinishTime, MinutesWorkedInSession_act: MinutesWorkedInSession_act, AlertMessage: AlertMessage, PumpAlertFlag: PumpAlertFlag, WaterAlertFlag: WaterAlertFlag, UsingHTFlowInSAModeAlertFlag: UsingHTFlowInSAModeAlertFlag, HTModeEnabled: HTModeEnabled, SAModeEnabled: SAModeEnabled, WorkorderSlotLocationUsed: WorkorderSlotLocationUsed, GeneralNotes: GeneralNotes, LocationNotes: LocationNotes, LastSyncTime: LastSyncTime))
-           print(Base.sharedInstance.WorkOrderDetail)
+           //print(Base.sharedInstance.WorkOrderDetail)
             
             let WorkOrderB = WorkOrderBriefData.init(WorkOrderNumber: currentWorkOrderID, Status: WorkorderStatusCode)
             if(WorkOrderB.status == "H"){

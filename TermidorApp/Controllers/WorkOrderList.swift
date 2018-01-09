@@ -1,123 +1,182 @@
 //
-//  WorkOrderList.swift
+//  NewViewController.swift
 //  TermidorApp
 //
-//  Created by Subitsah, Sakthi on 12/18/17.
+//  Created by Subitsah, Sakthi on 12/28/17.
 //  Copyright © 2017 Subitsah, Sakthi. All rights reserved.
 //
-//
-//import UIKit
-//import Alamofire
-//import SwiftyJSON
-//
-//class WorkOrderList:UIViewController,UITableViewDelegate,UITableViewDataSource {
-//
-//    @IBOutlet weak var tableView: UITableView!
-//    
-//     @IBOutlet weak var menuButn: UIBarButtonItem!
-//
-//     var twoDimentionalArray = [[String]]()
-// 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        LoadWorkOrderList(Url: "v", username: "v", password: "feq")
-//    
-//        self.navigationItem.title = "WorkOrders"
-//                menuButn.target = self.revealViewController()
-//                menuButn.action = #selector(SWRevealViewController.revealToggle(_:))
-//                self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//                self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-//                self.revealViewController().rearViewRevealOverdraw = 240
-//    
+
+import UIKit
+import Alamofire
+import SwiftyJSON
+import MBProgressHUD
+
+class WorkOrderList: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    struct ObjectKind {
+        let type: String
+        let belonging: [String]
+    }
+    var objects = [ObjectKind]()
+    override func viewDidAppear(_ animated: Bool) {
+        var new :ObjectKind?
+        var onHold :ObjectKind?
+        var completed:ObjectKind?
+        let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Loading"
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        LoadWorkOrderList1(Url: "hjvhj", username: "b bn", password: "bn nb") { (true) in
+            if(Base.sharedInstance.updatedWorkOrderIDs != Base.sharedInstance.WorkOrderID){
+                self.objects.removeAll()
+                LoadWorkOrderList2(Url: "hvh", username: "vn", password: "jv") { (t) in
+                   new = ObjectKind(type: "New", belonging:Base.sharedInstance.newWorkOrder)
+             
+                   onHold = ObjectKind(type: "OnHold", belonging:Base.sharedInstance.onHoldWorkOrder )
+               
+                     completed = ObjectKind(type: "Completed", belonging:Base.sharedInstance.completeWorkOrder )
+                 
+                    if (Base.sharedInstance.newWorkOrder.isEmpty == false) {
+                        self.objects.append(new!)
+                       
+                    }
+                    if (Base.sharedInstance.onHoldWorkOrder.isEmpty == false) {
+                        self.objects.append(onHold!)
+                       
+                    }
+                    if (Base.sharedInstance.completeWorkOrder.isEmpty == false) {
+                        self.objects.append(completed!)
+                        
+                    }
+                  
+                    self.do_table_refresh()
+                    MBProgressHUD.hideAllHUDs(for: self.view, animated: true);
+                }
+            }
+            else{
+                LoadWorkOrderDetail1(Url: "hjvhj", username: "n nb", password: " nb "){(true)
+                    in
+                     MBProgressHUD.hideAllHUDs(for: self.view, animated: true);
+                    
+                }
+            }
+            
+        }
+
+    }
+    func do_table_refresh()
+    {
+            self.tableView.reloadData()
+            return
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+      //  print("The numberOf section \(objects.count)")
+        return objects.count
+    
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return objects[section].belonging.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:WorkOrderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WorkOrderTableViewCell
+        let WorkNum = objects[indexPath.section].belonging[indexPath.row]
+        cell.WorkOrderNum.text = WorkNum
+        let Address = Base.sharedInstance.WorkOrderIDandStaus.index{$0.workOrderNumber == WorkNum}
+        cell.Address.text = Base.sharedInstance.WorkOrderIDandStaus[Address!].Address as! String
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+       
+        return objects[section].type
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 3
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 100.0
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Base.sharedInstance.selectedWorkOrder = objects[indexPath.section].belonging[indexPath.row]
+        print("-----Selected:\(Base.sharedInstance.selectedWorkOrder)")
+                if let i = Base.sharedInstance.WorkOrderDetail.index(where: { $0.serviceWorkorderID == Base.sharedInstance.selectedWorkOrder }) {
+                    Base.sharedInstance.selectedWorkOrderDetail = Base.sharedInstance.WorkOrderDetail[i]
+                   print("Selected WorkOrderDetail----\(Base.sharedInstance.selectedWorkOrderDetail?.serviceWorkorderID)")
+                }
+                if let i = Base.sharedInstance.WorkOrderListObj.index(where: { $0.serviceWorkOrderId == Base.sharedInstance.selectedWorkOrder }) {
+                    Base.sharedInstance.selectedWorkOrderList = Base.sharedInstance.WorkOrderListObj[i]
+                    print("Selected WorkOrderList----\(Base.sharedInstance.selectedWorkOrderDetail?.serviceWorkorderID)")
+                }
+        let cell1 = tableView.cellForRow(at: indexPath as IndexPath)
+        if(Base.sharedInstance.selectedWorkOrderDetail?.workorderStatusCode == "N"){
+            performSegue(withIdentifier:"DetailSegue1", sender: cell1)
+        }else{
+            print("Hold and Complete")
+          performSegue(withIdentifier:"DetailHoldAndComp", sender: cell1)
+        }
+        
+       // let cell1 = tableView.cellForRow(at: indexPath as IndexPath)
+       // performSegue(withIdentifier: "DetailSegue1", sender: cell1)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         Base.sharedInstance.selectedWorkOrder?.removeAll()
+        if segue.identifier == "DetailHoldAndComp"{
+             print("Im here in Hold and Comp")
+        let destinationVC = segue.destination as! WorkOrderDetailHoldAndCompTableViewController
+        let indexpath = self.tableView.indexPath(for: sender as! UITableViewCell)!
+        destinationVC.title = objects[indexpath.section].belonging[indexpath.row]
+        }
+    }
+}
+   
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        Base.sharedInstance.selectedWorkOrder?.removeAll()
+//        let indexpath = self.tableView.indexPath(for: sender as! UITableViewCell)!
+//         Base.sharedInstance.selectedWorkOrder = objects[indexpath.section].belonging[indexpath.row]
+//        if let i = Base.sharedInstance.WorkOrderDetail.index(where: { $0.serviceWorkorderID == Base.sharedInstance.selectedWorkOrder }) {
+//            Base.sharedInstance.selectedWorkOrderDetail = Base.sharedInstance.WorkOrderDetail[i]
+//            //print("Selected WorkOrderDetail----\(Base.sharedInstance.selectedWorkOrderDetail)")
+//        }
+//        if let i = Base.sharedInstance.WorkOrderListObj.index(where: { $0.serviceWorkOrderId == Base.sharedInstance.selectedWorkOrder }) {
+//            Base.sharedInstance.selectedWorkOrderList = Base.sharedInstance.WorkOrderListObj[i]
+//        }
 //        
-//    }
-//    
-//
-//
-//
-//}
-//func LoadWorkOrderList(Url:String,username:String,password:String){
-//    let inj = "http://stage.evergreen.datacore.us/WorkOrders"
-//    let headers = [
-//        "Authorization": "Bearer \(Base.sharedInstance.Token)",
-//        "Content-Type": "application/X-Access-Token"
-//    ]
-//    Alamofire.request(inj, headers: headers).responseJSON { response in
-//        //  print(response)
-//        let json = JSON(response.result.value!)
-//        if((json["Message"].string as String!) == "Authorization has been denied for this request."){
-//            doAuth(username: "test_action3", password:"termite") { (true) in
-//                LoadWorkOrderList(Url: "gjsbgjkb", username: username,password:password){(true) in
-//                    //  completion(true)
-//                }
+//        if(Base.sharedInstance.selectedWorkOrderDetail?.workorderStatusCode == "N"){
+//        if segue.identifier == "DetailSegue1" {
+//            let destinationVC = segue.destination as! WorkOrderDetailHoldAndCompTableViewController
+// //           let destinationVC = segue.destination as! WorkOrderDetailTableViewController
+////            let indexpath = self.tableView.indexPath(for: sender as! UITableViewCell)!
+////            Base.sharedInstance.selectedWorkOrder = objects[indexpath.section].belonging[indexpath.row]
+////            if let i = Base.sharedInstance.WorkOrderDetail.index(where: { $0.serviceWorkorderID == Base.sharedInstance.selectedWorkOrder }) {
+////                Base.sharedInstance.selectedWorkOrderDetail = Base.sharedInstance.WorkOrderDetail[i]
+////            }
+////            if let i = Base.sharedInstance.WorkOrderListObj.index(where: { $0.serviceWorkOrderId == Base.sharedInstance.selectedWorkOrder }) {
+////                Base.sharedInstance.selectedWorkOrderList = Base.sharedInstance.WorkOrderListObj[i]
+////            }
+////
+//            destinationVC.title = objects[indexpath.section].belonging[indexpath.row]
+//           
+//            }}else
+//        {
+//          if segue.identifier == "DetailHoldAndComp"{
+//            print("Im here in Hold and Comp")
+//             let destinationVC = segue.destination as! WorkOrderDetailHoldAndCompTableViewController
+//            let indexpath = self.tableView.indexPath(for: sender as! UITableViewCell)!
+//             destinationVC.title = objects[indexpath.section].belonging[indexpath.row]
 //            }
 //            
-//        }else {
-//            for (key, subJson) in json {
-//                // print(key.count)
-//                let ServMgmtPersonID = (subJson["ServMgmtPersonID"].string as String!)!
-//                let ServMgmtUserRoleCode = (subJson["ServMgmtUserRoleCode"].string as String!)!
-//                let ServMgmtUserSubRoleCode = (subJson["ServMgmtUserSubRoleCode"].string as String!)!
-//                let ServMgmtGroupID = (subJson["ServMgmtGroupID"].string as String!)!
-//                let ServiceWorkorderID = (subJson["ServiceWorkorderID"].string as String!)!
-//                let ServiceWorkorderNumber = (subJson["ServiceWorkorderNumber"].intValue)
-//                let ServMgmtWorkorderID = (subJson["ServMgmtWorkorderID"].string as String!)!
-//                let CustomerGroupID = (subJson["CustomerGroupID"].string as String!)!
-//                let CustomerPersonID = (subJson["CustomerPersonID"].string as String!)!
-//                let CustomerUserRoleCode = (subJson["CustomerUserRoleCode"].string as String!)!
-//                let CustomerUserSubRoleCode = (subJson["CustomerUserSubRoleCode"].string as String!)!
-//                let CustomerFirstName = (subJson["CustomerFirstName"].string as String!)!
-//                let CustomerLastName = (subJson["CustomerLastName"].string as String!)!
-//                let LocationTitle = (subJson["LocationTitle"].string as String!)!
-//                let LocationCode = (subJson["LocationCode"].string as String!)!
-//                let AddressLine1 = (subJson["AddressLine1"].string as String!)!
-//                let AddressLine2 = (subJson["AddressLine2"].string as String!)!
-//                let AttentionLine = (subJson["AttentionLine"].string as String!)!
-//                let PostalCode = (subJson["PostalCode"].string as String!)!
-//                let StateProvinceCode = (subJson["StateProvinceCode"].string as String!)!
-//                let City = (subJson["City"].string as String!)!
-//                let CountryCode = (subJson["CountryCode"].string as String!)!
-//                let WOGeneralNotes = (subJson["WOGeneralNotes"].string as String!)!
-//                let WOLocationNotes = (subJson["WOLocationNotes"].string as String!)!
-//                //  let GeneralNotes = (subJson["GeneralNotes"].string as String!)!
-//                let WOAGeneralNotes = (subJson["WOAGeneralNotes"].string as String!)!
-//                let Billable = (subJson["Billable"].string as String!)!
-//                let TermicideTypeCode_pln = (subJson["TermicideTypeCode_pln"].string as String!)!
-//                let SoilTypeCode_pln = (subJson["SoilTypeCode_pln"].string as String!)!
-//                let SoilTypeRefCode_pln = (subJson["SoilTypeRefCode_pln"].intValue)
-//                let HT_InjectionCount_pln = (subJson["HT_InjectionCount_pln"].intValue)
-//                let HT_LinearDistanceApplication_pln = (subJson["HT_LinearDistanceApplication_pln"].intValue)
-//                let HT_TermicideVolume_pln = (subJson["HT_TermicideVolume_pln"].intValue)
-//                let HT_WaterVolume_pln = (subJson["HT_WaterVolume_pln"].floatValue)
-//                let HT_PumpVolume_pln = (subJson["HT_PumpVolume_pln"].floatValue)
-//                let HT_InjectorTimer_pln = (subJson["HT_InjectorTimer_pln"].floatValue)
-//                let SA_InjectionCount_pln = (subJson["SA_InjectionCount_pln"].intValue)
-//                let SA_LinearDistanceApplication_pln = (subJson["SA_LinearDistanceApplication_pln"].intValue)
-//                let SA_TermicideVolume_pln = (subJson["SA_TermicideVolume_pln"].intValue)
-//                let SA_WaterVolume_pln = (subJson["SA_WaterVolume_pln"].intValue)
-//                let SA_PumpVolume_pln = (subJson["SA_PumpVolume_pln"].floatValue)
-//                let SA_InjectorTimer_pln = (subJson["SA_InjectorTimer_pln"].floatValue)
-//                let LinearMeasurementUnit_pln = (subJson["LinearMeasurementUnit_pln"].string as String!)!
-//                let VolumeMeasurementUnit_pln = (subJson["VolumeMeasurementUnit_pln"].string as String!)!
-//                let MinutesWorkedInSession_pln = (subJson["MinutesWorkedInSession_pln"].intValue)
-//                let Demo = (subJson["Demo"].string as String!)!
-//                let EntryTime = (subJson["EntryTime"].string as String!)!
-//                let LastSyncTime = (subJson["LastSyncTime"].string as String!)!
-//                let EntityActive = (subJson["EntityActive"].string as String!)!
-//                let ViewportCode = (subJson["ViewportCode"].string as String!)!
-//                let ReadyForArchive = (subJson["ReadyForArchive"].string as String!)!
-//                let isNotTooOld = (subJson["isNotTooOld"].boolValue)
-//                
-//                print(ServiceWorkorderID)
-//                Base.sharedInstance.WorkOrderID.append(ServiceWorkorderID)
-//                LoadWorkOrderDetail(Url: "vh", username: "bv v", password: "cvb", completion: { (true) in
-//                })
-//            }
 //        }
+//    }
+    
+//}
 //    }
 //}
 
-
-    
 
 
